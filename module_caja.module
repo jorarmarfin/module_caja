@@ -29,7 +29,7 @@ function module_caja_help($route_name, RouteMatchInterface $route_match) {
 function module_caja_theme() {
   return [
     'module_caja' => [
-      'render element' => 'children',
+    'template' => 'module-caja'
     ],
   ];
 }
