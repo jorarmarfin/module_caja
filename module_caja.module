@@ -29,6 +29,9 @@ function module_caja_help($route_name, RouteMatchInterface $route_match) {
 function module_caja_theme() {
   return [
     'module_caja' => [
+    'variables' =>[
+      'data' => NULL,
+    ],
     'template' => 'module-caja'
     ],
   ];

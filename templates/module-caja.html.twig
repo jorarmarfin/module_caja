@@ -1,2 +1,35 @@
 <!-- Add you custom twig html here -->
-<p>Test twig template!</p>
+<div class="Caja">
+<form action="/caja">
+	<label>Año</label>
+	<select name="anio" class="select-year">
+		<option selected="selected" value="_none" >-Año-</option>
+		{% for year in data.years %}
+		  <option value="{{ year }}">{{ year }}</option>
+		{% endfor %}
+	</select>
+	<label>Mes</label>
+	<select name="mes" class="select-year">
+		<option selected="selected" value="_none" >-Mes-</option>
+		{% for month in data.months %}
+		  <option value="{{ month['value'] }}">{{ month['title'] }}</option>
+		{% endfor %}
+	</select>
+	<input type="submit" value="Añadir Filtro" class="btn ">
+</form>
+<p>Año de consulta {{ data.anio}} mes {{ data.mes}}</p>
+
+	<div class="mytabla">
+		<table>
+			<thead>
+				<tr>
+				<th>prueba</th>
+				</tr>
+			</thead>
+			<tbody><tr><td>prueba</td></tr></tbody>
+			<tfoot></tfoot>
+		</table>
+
+	</div>
+
+</div>
