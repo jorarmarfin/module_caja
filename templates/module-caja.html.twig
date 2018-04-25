@@ -17,19 +17,85 @@
 	</select>
 	<input type="submit" value="Añadir Filtro" class="btn ">
 </form>
-<p>Año de consulta {{ data.anio}} mes {{ data.mes}}</p>
+<p><h1>Año de consulta {{ data.anio}} mes {{ data.mes}}</h1></p>
 
 	<div class="mytabla">
+		<p><h2>Total de Ingresos</h2></p>
 		<table>
 			<thead>
 				<tr>
 				<th>prueba</th>
+				<th>valor</th>
 				</tr>
 			</thead>
-			<tbody><tr><td>prueba</td></tr></tbody>
-			<tfoot></tfoot>
-		</table>
+			<tbody>
+				{% for ingreso in data.ingresos %}
 
+				<tr>
+					<td>{{ingreso['title']}}</td>
+					<td>{{ingreso['cantidad']}}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+			<tfoot>
+				<tr>
+					<th>Total</th>
+					<th>{{data.suma}}</th>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+	<div class="mytabla">
+		<p><h2>Total de Egresos</h2></p>
+		<table>
+			<thead>
+				<tr>
+				<th>prueba</th>
+				<th>valor</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for ingreso in data.ingresos %}
+
+				<tr>
+					<td>{{ingreso['title']}}</td>
+					<td>{{ingreso['cantidad']}}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+			<tfoot>
+				<tr>
+					<th>Total</th>
+					<th>{{data.suma}}</th>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+	<div class="mytabla">
+		<p><h2>Porcentajes</h2></p>
+		<table>
+			<thead>
+				<tr>
+				<th>prueba</th>
+				<th>valor</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for ingreso in data.ingresos %}
+
+				<tr>
+					<td>{{ingreso['title']}}</td>
+					<td>{{ingreso['cantidad']}}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+			<tfoot>
+				<tr>
+					<th>Total</th>
+					<th>{{data.suma}}</th>
+				</tr>
+			</tfoot>
+		</table>
 	</div>
 
 </div>
